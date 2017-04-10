@@ -1,5 +1,8 @@
 <?php
 
+echo $username;
+echo $password;
+
 
 
 ?>
@@ -23,7 +26,12 @@
 	<h1>WELCOME TO THE SIMPLE LOGIN SYSTEM</h1>
 	Please select one of the option
 	<ul>
-		<li><a href="login.php">LOGIN</a></li>
+		<li>LOGIN</li>
+		<form method="post" action="index.php">
+			<input type="text" name = "username" placeholder="Enter username">
+			<input type="password" name="password" placeholder="Enter password">
+			<input type="submit" name="submit" value="Login">
+		</form>
 		<li><a href="register.php">REGISTER</a></li>
 	</ul>
 </body>
