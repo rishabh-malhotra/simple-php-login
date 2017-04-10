@@ -1,8 +1,8 @@
 <?php
-
 $username=$_POST['username'];
 $password=$_POST['password'];
-
+echo $username;
+echo $password;
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ $password=$_POST['password'];
 	Please select one of the option
 	<ul>
 		<li>LOGIN</li>
-		<form method="post" action="index.php">
+		<form method="POST" action="index.php">
 			<input type="text" name = "username" placeholder="Enter username">
 			<input type="password" name="password" placeholder="Enter password">
 			<input type="submit" name="submit" value="Login">
