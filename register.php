@@ -1,9 +1,24 @@
 <?php
 
+
+$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$db="login";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password,$db);
+
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	}
+
+
 $name=$_POST['name'];
 $username=$_POST['username'];
 $password=$_POST['password'];
-//$sql=INSERT INTO `user`(`name`, `username`, `password`) VALUES ([$name],[$username],[$password]);
+mysqli_query($conn,"INSERT INTO `user`(`name`, `username`, `password`) VALUES ('$name','$username','$password')");
 
 ?>
 
