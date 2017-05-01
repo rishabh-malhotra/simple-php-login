@@ -25,7 +25,7 @@ if($query) {
 }
 if($username == $dbUserName && $password == $dbPassword) {
 
-	echo "hello $name with username : $username and password : $dbPassword";
+	echo "hello $name with username : $username";
 	echo " <p><b>WELCOME you are logged in!!</b>";
 	//$_SESSION['username'] = $username;
 	//$_SESSION['id'] = $userId;
