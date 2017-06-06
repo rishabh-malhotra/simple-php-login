@@ -12,6 +12,11 @@ $conn = new mysqli($servername, $dusername, $password,$db);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
+session_start();
+
+
+
+if($_POST['submit']!=NULL){
 $username=$_POST['username'];
 $password=$_POST['password'];
  
@@ -25,18 +30,18 @@ if($query) {
 }
 if($username == $dbUserName && $password == $dbPassword) {
 
-	echo "hello $name with username : $username";
-	echo " <p><b>WELCOME you are logged in!!</b>";
-	//$_SESSION['username'] = $username;
-	//$_SESSION['id'] = $userId;
-	//header('Location: user.php');
+
+	
+	$_SESSION['username'] = $username;
+	$_SESSION['name'] = $name;
+	header('Location: user.php');
 
 
 }
 else {
 	echo "<b><i>Incorrect credentials</i><b>";
 
-}
+}}
 
 ?>
 

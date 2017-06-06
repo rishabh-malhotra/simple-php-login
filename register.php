@@ -12,6 +12,7 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
+	session_start();
 	$val=$_POST['register'];
 	if($val!=NULL){
 	$name=$_POST['name'];
@@ -23,9 +24,10 @@
 		//echo "Can't Register try again";	
 	if($result!=NULL){
 	if($result){
+		echo "REGISTRATION Successful<p><b>Redirecting to index.php so you can log in:)</b></p>";
+		header("Refresh:5; url=index.php", true, 160);
+		//header('Location: index.php');
 		
-		header('Location: index.php');
-		echo "REGISTRATION Successful";
 	}
 	else
 		echo "Can't Register try again";
